@@ -45,9 +45,11 @@ const tokenRequest = {
     grant_type: 'authorization_code',
     code: code
   }
+
 console.log('tokenRequest',tokenRequest);
 console.log('token server url', tokenServerUrl);
-let tokenResponse = await superagent.post(tokenServerUrl).send(tokenRequest);
+//instead of sending as json query, I am sending the token request as x-www-form-urlencoded
+let tokenResponse = await superagent.post(tokenServerUrl).type('form').send(tokenRequest);
 
   let access_token = tokenResponse.body.access_token;
 
