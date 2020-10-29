@@ -23,8 +23,9 @@ We have a single form, so that we can have a frontend to take us to our redirect
 A user needs a local server set up and access to an API client to make the process smoother. The server would be configured to use the public folder for static files.
 
 #### Ramp-Up Projections
-We started off believing this would be about 2 hrs here. It ended up being like 4 as there is so much
-documentation to get through and with any coding, small errors in formatting can make a huge difference here.
+
+We started off believing this would be about 2 hrs. It ended up taking 4 or so hours as there is so much
+documentation to get through and with any coding, small errors in formatting can make a huge difference.
 
 
 #### Community Support and Adoption levels
