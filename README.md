@@ -3,7 +3,7 @@
 
  **Author: Riva Davidowski**
 
-**An Express/Node.js based server using a custom “authentication” module that is designed to handle user registration and sign in using Basic, Bearer, or OAuth along with a custom “authorization” module**
+**An Express/Node.js based server using a custom “authentication” module that is designed to handle user registration and sign in using Basic, Bearer, or OAuth along with a custom “authorization” module. Our group chose to use WordPress as the Auth provider.**
 
 ### Installing dependencies:
 
@@ -17,7 +17,9 @@ You will need to install the following on your machine:
     - `dotenv`
     - `cors`
     -  `express`
-Start server:
+    -  `superagent`
+    -  
+**Start server:**
    
 ```
  /* give it a port number and optionally pass a function to call when app
@@ -30,12 +32,16 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 ### env Requirements:
 
-PORT=3001 
+PORT=3001
 
 CLIENT_ID=
 
 CLIENT_SECRET=
 
-REDIRECT_URL=
+REDIRECT_URI=http://localhost:3001/oauth
+
+TOKEN_SERVER_URL=
 
 ### UML:
+
+![Auth](Auth.png)
