@@ -19,9 +19,8 @@ We have a single form, so that we can have a frontend to take us to our redirect
 
 
 ### Systems Requirements
-A user needs a local server set up and access to an API client to make the process smoother. The server would be configured to use the public folder for static files.
-=
 
+A user needs a local server set up and access to an API client to make the process smoother. The server would be configured to use the public folder for static files.
 
 #### Ramp-Up Projections
 We started off believing this would be about 2 hrs here. It ended up being like 4 as there is so much
