@@ -37,15 +37,18 @@ module.exports = async function authorize(req, res, next) {
 }
 
 async function exchangeCodeForToken(code) {
+//tries to call post to tokenServerUrl and that is giving us bad request
+const tokenRequest = {
+    client_id: process.env.CLIENT_ID,
+    redirect_uri: process.env.REDIRECT_URI,
+    client_secret: process.env.CLIENT_SECRET,
+    grant_type: 'authorization_code',
+    code: code
+  }
+console.log('tokenRequest',tokenRequest);
+console.log('token server url', tokenServerUrl);
+let tokenResponse = await superagent.post(tokenServerUrl).send(tokenRequest);
 
-  let tokenResponse = await superagent.post(tokenServerUrl).send({
-    client_id: CLIENT_ID,
-    redirect_uri: API_SERVER,
-    client_secret: CLIENT_SECRET,
-    response_type: code,
-    grant_type: 'authorization_code'
-  })
-  console.log(client_id,redirect_uri,client_secret,response_type);
   let access_token = tokenResponse.body.access_token;
 
   return access_token;
