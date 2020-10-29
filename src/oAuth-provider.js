@@ -8,7 +8,7 @@ const users = require('./users.js');
   https://developer.github.com/apps/building-oauth-apps/
 */
 
-const tokenServerUrl = process.env.TOKEN_SERVER;
+const tokenServerUrl = process.env.TOKEN_SERVER_URL;
 const remoteAPI = process.env.REMOTE_API;
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
@@ -39,13 +39,13 @@ module.exports = async function authorize(req, res, next) {
 async function exchangeCodeForToken(code) {
 
   let tokenResponse = await superagent.post(tokenServerUrl).send({
-    code: code,
     client_id: CLIENT_ID,
-    client_secret: CLIENT_SECRET,
     redirect_uri: API_SERVER,
-    grant_type: 'authorization_code',
+    client_secret: CLIENT_SECRET,
+    response_type: code,
+    grant_type: 'authorization_code'
   })
-
+  console.log(client_id,redirect_uri,client_secret,response_type);
   let access_token = tokenResponse.body.access_token;
 
   return access_token;
