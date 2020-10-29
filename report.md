@@ -7,7 +7,7 @@ OAuth Comparative Analysis
 ### Overall Score and Comments
 #### Score (Out of 10): 8
 #### General Comments
-We have a single form, so that we can have a frontend to take us to our redirect route. When we click authorize through our auth provider, a code is generated and sent to the outh route (our redirect route). Before anything is in the browser, oauth uses the code to get the token. In a real world application, we would not just receive an access token, but would be redirected to a webpage. Superagent assists us in swapping the code for the access token. The code is given to us from the Auth server. We then take that code and use superagent to post to the auth server to get the access token.
+We have a single form, so that we can have a frontend to take us to our redirect route. When we click authorize through our auth provider, a code is generated and sent to the OAuth route (our redirect route). Before anything is in the browser, OAuth uses the code to get the token. In a real world application, we would not just receive an access token, but would be redirected to a webpage. Superagent assists us in swapping the code for the access token. The code is given to us from the Auth server. We then take that code and use superagent to post to the auth server to get the access token.
 
 #### Pros
 * Wordpress Docs were easier to understand than most
@@ -18,14 +18,14 @@ We have a single form, so that we can have a frontend to take us to our redirect
 * Small mistakes in request bodies or response types caused issues. The fixes were simple but they were easy to miss.
 
 
-#### Systems Requirements
-A user needs a local server set up and access to an API client to make the process smoother. The server would be configured to use the public folder for static files.
-=
+### Systems Requirements
 
+A user needs a local server set up and access to an API client to make the process smoother. The server would be configured to use the public folder for static files.
 
 #### Ramp-Up Projections
-We started off believing this would be about 2 hrs here. It ended up being like 4 as there is so much
-documentation to get through and with any coding, small errors in formatting can make a huge difference here.
+
+We started off believing this would be about 2 hrs. It ended up taking 4 or so hours as there is so much
+documentation to get through and with any coding, small errors in formatting can make a huge difference.
 
 
 #### Community Support and Adoption levels
@@ -54,7 +54,7 @@ You will need to install the following on your machine:
     - `cors`
     -  `express`
     -  `superagent`
-    -  
+
 **Start server:**
    
 ```

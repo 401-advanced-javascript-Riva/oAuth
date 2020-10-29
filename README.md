@@ -18,7 +18,6 @@ You will need to install the following on your machine:
     - `cors`
     -  `express`
     -  `superagent`
-    -  
 **Start server:**
    
 ```
